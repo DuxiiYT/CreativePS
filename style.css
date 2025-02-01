@@ -30,7 +30,7 @@ nav.visible {
 }
 
 nav .logo img {
-    width: 200px; 
+    width: 150px; 
     margin-right: 10px;
 }
 
@@ -311,9 +311,9 @@ section {
 }
 
 .question::after {
-    content: '\2193'; /* Use the downwards arrow */
+    content: '\2193';
     font-size: 18px;
-    margin-right: 10px; /* Adds space between the arrow and the text */
+    margin-right: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -340,9 +340,51 @@ section {
     transform: rotate(180deg);
 }
 
-@media (max-width: 1590px) {
+
+@media (max-width: 1070px) {
+    .top-text {
+        font-size: 28px;
+    }
+
+    .bottom-text {
+        font-size: 18px;
+    }
+
+    .center-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .get-free-button {
+        position: absolute;
+        right: 90px;
+        top: 4px;
+    }
+
+    .cta-button {
+        width: 40%;
+        padding: 14px 0;
+        font-size: 16px;
+        top: 50px;
+        right: 90px;
+    }
+
+    .bottom-text {
+        padding-top: 0px;
+    }
+
+    .cta-link {
+        position: relative;
+        padding-left: 300px;
+    }
+
+    .image-text-container {
+        width: 100%;
+    }
+
     .image-text {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
@@ -351,53 +393,71 @@ section {
         margin: 0 auto;
     }
 
-    .text {
-        max-width: 80%;
-        margin: 20px auto;
-    }
-
-    .text-top h2 {
-        font-size: 50px;
-        font-weight: bold;
-    }
-    
-    .text-top p {
-        font-size: 24px;
-    }
-    
-    .text-bottom h2 {
-        font-size: 50px;
-        font-weight: bold;
-    }
-
-    .text-top {
-        padding: 100px;
-        color: white;
-        text-align: left;
-        padding-right: 100px;
-    }
-    
-    .text-bottom {
-        padding: 100px;
-        color: white;
-        text-align: left;
-        padding-left: 100px;
-    }
-    
-    .text-bottom p {
-        font-size: 24px;
-    }
-
-    .top-text {
-        position: absolute;
-        top: -30%;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        font-size: 32px;
-        font-weight: bold;
+    .text-top, .text-bottom {
+        padding: 20px;
         text-align: center;
-        width: 100%;
-        z-index: 10;
+    }
+
+    .faq {
+        margin-top: 20px;
+        margin-right: 0;
+        padding: 0 20px;
+    }
+
+    .faq-item {
+        margin-bottom: 10px;
+    }
+
+    .question {
+        font-size: 15px;
+        font-weight: bold;
+        color: #5425B0;
+        transition: color 0.3s ease;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .answer {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        margin-top: 10px;
+        font-size: 6px;
+        color: #ddd;
+        padding: 0 10px;
+        background-color: #222;
+        border-radius: 8px;
+        transition: max-height 0.5s ease-out, opacity 0.3s ease-out, padding 0.3s ease;
+    }
+
+    .answer.show {
+        max-height: 200px;
+        opacity: 1;
+        padding: 10px;
+    }
+
+    .answer.show + .question::after {
+        transform: rotate(180deg);
+    }
+
+    .question::after {
+        content: '\2193';
+        font-size: 18px;
+        margin-right: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    #page3 h1 {
+        font-size: 20px;
+        top: 100px;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        min-height: 50vh;
+    }
+
+    .lastcontent p {
+        font-size: 14px;
     }
 }
