@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreativePS - Scripts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="icon.png" alt="Website Logo">
+        </div>
+
+        <ul>
+            <li><a href="https://dsc.gg/cpsscripts"></i>Discord</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home" class="homecontent">
+        <video autoplay muted loop>
+            <source src="star-background.mp4" type="video/mp4">
+        </video>
+        <div class="center-container">
+            <span class="top-text">CreativePS - Scripts</span>
+            <img src="banner.jpg" alt="Centered Image" class="center-image">
+            <span class="bottom-text">Growtopia's #1 Best Script Sellers</span>
+            <a href="https://dsc.gg/cpsscripts" class="cta-link">
+                <button class="cta-button">Discord Server</button>
+            </a>
+        </div>
+    </section>
+    
+    <section id="page2" class="content">
+        <div class="image-text-container">
+            <div class="image-text">
+                <img src="proxy.png" alt="Top Image" class="image">
+                <div class="text-top">
+                    <h2>Proxy</h2>
+                    <p>Features: Proxy Menu, AutoSB Included, Tons of Commands, Quality of Life Options, and much more</p>
+                    <a href="https://dsc.gg/cpsscripts" class="cta-link">
+                        <button class="get-free-button">Get Free</button>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="image-text reverse">
+                <img src="btkhelper.png" alt="Bottom Image" class="image">
+                <div class="text-bottom">
+                    <h2>BTK Helper</h2>
+                    <p>Features: Auto Host, Auto Calculate Drops, Auto Collect & Drop Bets, Easy to Setup, and much more.</p>
+                    <a href="https://dsc.gg/cpsscripts" class="cta-link">
+                        <button class="get-free-button">Get Free</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="page3" class="content">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq">
+            <div class="faq-item">
+                <p class="question">Are the scripts safe?</p>
+                <div class="answer">
+                    <p>Yes, our scripts are safe to use. We ensure they are thoroughly tested before release.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <p class="question">What Executors are supported?</p>
+                <div class="answer">
+                    <p>Our scripts currently support GrowPai but with the release of Creative Games it is not necessary</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <p class="question">Are there any free scripts?</p>
+                <div class="answer">
+                    <p>Yes, we offer a selection of free scripts on our Discord server.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <p class="question">Can we get free paid scripts?</p>
+                <div class="answer">
+                    <p>Occasionally, we give away free paid scripts via promotions or events on our Discord.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="page4" class="lastcontent">
+        <p>&copy; CreativePS - Scripts</p>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        document.querySelectorAll('.content').forEach(section => {
+            observer.observe(section);
+        });
+
+        document.querySelectorAll('.homecontent').forEach(section => {
+            observer.observe(section);
+        });
+
+        document.querySelectorAll('.lastcontent').forEach(section => {
+            observer.observe(section);
+        });
+
+        window.addEventListener('load', () => {
+            document.querySelector('nav').classList.add('visible');
+        });
+
+        document.querySelectorAll('.question').forEach((question) => {
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+
+            answer.classList.toggle('show');
+        });
+    });
+    </script>
+</body>
+</html>
